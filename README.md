@@ -174,6 +174,9 @@ node tools/smoke.mjs
 | 字体 | [SIL OFL 1.1](THIRD_PARTY_NOTICES.md) |
 | 上游 Word Atlas 代码 | MIT（仅作来源说明，本项目未复制其源码） |
 
+MIT 仅覆盖本项目代码与文档，具体范围见 [`LICENSE-SCOPE.md`](LICENSE-SCOPE.md)；
+词库与插画的内容许可见 [`CONTENT_LICENSE.md`](CONTENT_LICENSE.md)。
+
 ## 致谢
 
 - [designfuchen/word-atlas](https://github.com/designfuchen/word-atlas) — 词库、插画与界面参考
