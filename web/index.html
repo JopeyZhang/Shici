@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html lang="zh-CN" data-theme="paper" data-size="m" data-font="sans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#f6f1e7" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>拾词 · 雅思词汇图鉴</title>
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div id="splash" class="splash">
+      <div class="splash-mark">拾</div>
+      <b>拾词</b>
+      <small>雅思词汇图鉴</small>
+      <i class="splash-bar"></i>
+    </div>
+
+    <div id="app" class="app" hidden>
+      <main id="view" class="view" tabindex="-1"></main>
+      <nav id="tabbar" class="tabbar" aria-label="主导航"></nav>
+    </div>
+
+    <div id="sheet" class="sheet-wrap" hidden>
+      <div class="sheet-mask" data-close="1"></div>
+      <section class="sheet" role="dialog" aria-modal="true">
+        <div id="sheet-body"></div>
+      </section>
+    </div>
+
+    <div id="toast" class="toast" role="status" hidden></div>
+
+    <!-- 离线词库（6.4MB，随 APK 打包，不联网） -->
+    <script src="js/data.js"></script>
+    <script src="js/fsrs.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

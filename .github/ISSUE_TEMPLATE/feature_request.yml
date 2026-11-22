@@ -1,0 +1,38 @@
+name: Feature request / 功能建议
+description: 提出新功能或改进建议
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 想解决的问题
+      description: 现在哪里不方便？为什么需要这个功能？
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: 你希望的做法
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 备选方案 / 参考
+      description: 例如参考站点里的某个交互、其他 App 的做法
+    validations:
+      required: false
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 涉及范围
+      options:
+        - 学习 / 复习
+        - 练习
+        - 词库 / 内容
+        - 界面 / 主题
+        - 数据导入导出
+        - 其他
+    validations:
+      required: true

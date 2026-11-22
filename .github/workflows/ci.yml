@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Data & FSRS tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Syntax check
+        run: |
+          node --check web/js/app.js
+          node --check web/js/fsrs.js
+          node --check web/js/store.js
+          node --check tools/prepare_data.mjs
+          node --check tools/test_fsrs.mjs
+          node --check tools/test_data.mjs
+
+      - name: Generate runtime dataset
+        run: node tools/prepare_data.mjs
+
+      - name: FSRS scheduler tests
+        run: node tools/test_fsrs.mjs
+
+      - name: Dataset & illustration integrity
+        run: node tools/test_data.mjs

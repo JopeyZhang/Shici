@@ -1,0 +1,28 @@
+# --- 构建产物 ---
+build/
+out/
+*.idsig
+
+# 生成的运行时数据（由 tools/prepare_data.mjs 生成）
+web/js/data.js
+
+# --- 本地密钥（绝不提交） ---
+tools/*.keystore
+tools/*.jks
+*.keystore
+
+# --- 工具临时文件 ---
+out/edge-profile*/
+out/tmp/
+tools/.media-report.json
+
+# --- 编辑器 / 系统 ---
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# --- Node ---
+node_modules/
+npm-debug.log*

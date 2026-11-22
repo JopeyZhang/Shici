@@ -1,0 +1,62 @@
+name: Bug report / 问题反馈
+description: 报告 App 或数据问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量填写完整信息。**请勿提交密钥、token、个人隐私内容。**
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题类型
+      options:
+        - App 界面 / 交互
+        - 学习 / 复习 / 练习逻辑
+        - 发音（TTS）
+        - 导入 / 导出进度
+        - 词库或插画内容错误
+        - 安装 / 构建
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App 版本
+      description: 在「我的 → 关于」可以看到，例如 v1.0.0
+      placeholder: v1.0.0
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: 设备与系统
+      placeholder: OPPO PCLM10 / Android 12 / 1080×2400
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 从打开 App 开始，一步一步写
+      placeholder: |
+        1. 打开「图鉴」
+        2. 进入「教育」话题
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果 / 实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: 截图或补充
+      description: 可以直接把截图拖进来
+    validations:
+      required: false

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>预览 · 390×844</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #20242e;
+        overflow: hidden;
+      }
+      iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 390px;
+        height: 844px;
+        border: 0;
+        background: #f6f1e7;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe id="f" title="preview"></iframe>
+    <script>
+      var m = /[?&]r=([^&]+)/.exec(location.search);
+      var r = m ? decodeURIComponent(m[1]) : 'today';
+      document.getElementById('f').src = '../web/index.html#/' + r;
+    </script>
+  </body>
+</html>

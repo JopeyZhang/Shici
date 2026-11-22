@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 安全漏洞（私下报告）
+    url: https://github.com/JopeyZhang/Shici/security/advisories/new
+    about: 请不要公开提交安全漏洞，使用 GitHub 私密报告。
+  - name: 上游词库与插画
+    url: https://github.com/designfuchen/word-atlas
+    about: 词库/插画本身的问题与授权，请参考上游项目。

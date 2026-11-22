@@ -1,0 +1,20 @@
+* text=auto
+
+# 词库保持原始字节，避免换行转换影响校验
+data/word-atlas.json -text
+
+# Windows 鑴氭湰淇濇寔 CRLF锛屽叾浣欒剼鏈?LF
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.sh  text eol=lf
+
+# 浜岃繘鍒惰祫婧?*.png  binary
+*.webp binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.woff2 binary
+*.apk  binary
+*.keystore binary
+*.idsig binary
